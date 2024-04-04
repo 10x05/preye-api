@@ -13,7 +13,7 @@ app.use(express.json());
 const database = process.env.DATABASE_LINK;
 const port = process.env.PORT;
 
-const cors = require("cors");
+const cors = import("cors");
 
 app.use(
   cors({
