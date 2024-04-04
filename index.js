@@ -13,6 +13,15 @@ app.use(express.json());
 const database = process.env.DATABASE_LINK;
 const port = process.env.PORT;
 
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
+
 app.use("/products", productRoute);
 app.use("/categories", categoryRoutes);
 
