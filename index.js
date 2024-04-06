@@ -17,7 +17,7 @@ import cors from "cors";
 
 app.use(
   cors({
-    origin: "https://mays.onrender.com/products/all-products",
+    origin: "http://localhost:3000/products/all-products",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
