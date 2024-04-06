@@ -18,7 +18,7 @@ const cors = require("cors");
 app.use(
   cors({
     origin: "https://mays.onrender.com/products/all-products",
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
