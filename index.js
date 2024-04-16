@@ -3,6 +3,9 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import productRoute from "./routes/productRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
+import authRoute from "./routes/authRoutes.js";
+import usersRoute from "./routes/usersRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -13,17 +16,18 @@ app.use(express.json());
 const database = process.env.DATABASE_LINK;
 const port = process.env.PORT;
 
-import cors from "cors";
-
 app.use(
   cors({
-    origin: "http://localhost:3000/products/all-products",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: ["http://localhost:5173"],
+    credentials: true,
+    // methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
 app.use("/products", productRoute);
 app.use("/categories", categoryRoutes);
+app.use("/auth", authRoute);
+app.use("/users", usersRoute);
 
 mongoose
   .connect(database)

@@ -7,7 +7,7 @@ const MaysSchema = mongoose.Schema({
     unique: true,
   },
   price: {
-    type: Number,
+    type: String,
     required: true,
     default: 0,
   },
