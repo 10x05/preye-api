@@ -20,7 +20,7 @@ app.use(
   cors({
     origin: [
       "https://may-mart.vercel.app/",
-      "http://localhost:5173",
+      "http://http://localhost:5173/",
       "https://mays.onrender.com/products/all-products",
     ],
     credentials: true,
