@@ -18,11 +18,7 @@ const port = process.env.PORT;
 
 app.use(
   cors({
-    origin: [
-      "https://may-mart.vercel.app/",
-      "http://http://localhost:5173/",
-      "https://mays.onrender.com/products/all-products",
-    ],
+    origin: ["https://may-mart.vercel.app", "http://localhost:5173/"],
     credentials: true,
     // methods: ["GET", "POST", "PUT", "DELETE"],
   })
